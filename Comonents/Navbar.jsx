@@ -135,7 +135,7 @@ const Navbar = () => {
       >
         <Image
           className="invert opacity-70"
-          src="/menu.svg"
+        src="/Menu.svg"
           alt="Menu"
           width={20}
           height={20}
