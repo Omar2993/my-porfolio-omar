@@ -17,62 +17,97 @@ const cormorant = Cormorant_Garamond({
 
 export default function About() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#f8f8f7]">
+  <section className="max-w-[1600px] mx-auto px-4 py-20">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(168,167,255,0.18),transparent_55%)]"></div>
+  <div className="grid lg:grid-cols-2 gap-8">
 
-      {/* Noise */}
-      <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.06] bg-[radial-gradient(#000_0.5px,transparent_0.5px)] bg-size-[8px_8px]"></div>
+    {/* Left */}
+    <div className="rounded-3xl border border-gray-200 p-8 shadow-[inset_0_0_160px_rgba(0,0,0,0.07)]">
 
-      {/* Container */}
-      <section className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col items-center px-6 pt-44 text-center lg:px-10">
+      <p className="tracking-[5px] text-gray-500 font-semibold">
+        ABOUT ME
+      </p>
 
-        {/* Main Heading */}
-        <h1
-          className={`${archivo.className}
-          leading-none
-          tracking-[-0.08em]
-          text-[72px]
-          sm:text-[110px]
-          md:text-[150px]
-          lg:text-[210px]
-          xl:text-[250px]
-          text-[#141414]`}
-        >
-          ABOUT ME
-        </h1>
-                {/* Subtitle */}
-        <p
-          className={`${inter.className}
-          mt-10
-          text-[12px]
-          sm:text-[14px]
-          md:text-[16px]
-          uppercase
-          tracking-[0.55em]
-          text-[#6d6d6d]`}
-        >
-          GET TO KNOW MORE ABOUT
+      <h1 className="text-4xl lg:text-6xl font-bold mt-4 leading-tight">
+        I build products
+        <br />
+        that feel simple,
+        <br />
+        fast & human.
+      </h1>
+
+      <p className="text-gray-500 mt-8 leading-8 text-lg">
+        I'm Omar, a Full Stack Next.js Developer based in Bangladesh.
+        I enjoy creating premium digital experiences with clean UI,
+        smooth interactions, and scalable backend solutions.
+      </p>
+
+      <p className="text-gray-500 mt-6 leading-8 text-lg">
+        My goal is to design products that not only look beautiful
+        but also solve real problems and provide meaningful experiences
+        for users.
+      </p>
+
+    </div>
+
+    {/* Right */}
+    <div className="rounded-3xl border border-gray-200 p-8 shadow-[inset_0_0_160px_rgba(0,0,0,0.07)] flex flex-col justify-between">
+
+      <div>
+
+        <p className="tracking-[5px] text-gray-500 font-semibold">
+          EXPERIENCE
         </p>
 
-        {/* Script Text */}
-        <h2
-          className={`${cormorant.className}
-          mt-2
-          italic
-          font-medium
-          leading-none
-          text-[#111111]
-          text-[52px]
-          sm:text-[70px]
-          md:text-[90px]
-          lg:text-[110px]`}
-        >
-          who i am.
-        </h2>
+        <div className="mt-8 space-y-8">
 
-      </section>
-    </main>
+          <div>
+            <h2 className="text-3xl font-bold">Frontend</h2>
+            <p className="text-gray-500 mt-2">
+              React.js • Next.js • Tailwind CSS
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold">Backend</h2>
+            <p className="text-gray-500 mt-2">
+              Node.js • Express.js • MongoDB
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold">Tools</h2>
+            <p className="text-gray-500 mt-2">
+              Git • GitHub • Vercel • Figma
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-12">
+
+        <div className="rounded-2xl border p-6">
+          <h1 className="text-5xl font-bold">15+</h1>
+          <p className="text-gray-500 mt-2">
+            Projects
+          </p>
+        </div>
+
+        <div className="rounded-2xl border p-6">
+          <h1 className="text-5xl font-bold">1+</h1>
+          <p className="text-gray-500 mt-2">
+            Years Learning
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
   );
 }

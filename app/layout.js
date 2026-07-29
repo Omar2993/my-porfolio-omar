@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       lang="en"
        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased min-h-screen bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed`}
     >
-      <body className="min-h-full flex flex-col mx-14 bg-white">
+      <body className="min-h-full flex flex-col lg:mx-14 md:mx-14 bg-white sm:mx-0">
         <LenisProvider>
         <Navbar />
         {children}
