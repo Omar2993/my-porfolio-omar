@@ -190,14 +190,14 @@ const Page = () => {
         >
           <div
             className="
-    md:col-span-1
-    rounded-3xl
-    border
-    border-gray-200
-    p-4
-    sm:p-6
-    min-h-55
-    shadow-[inset_0_0_160px_rgba(0,0,0,0.07)]
+                md:col-span-1
+                rounded-3xl
+                border
+                border-gray-200
+                p-4
+                sm:p-6
+                min-h-55
+                shadow-[inset_0_0_160px_rgba(0,0,0,0.07)]
   "
           >
             <div className="flex justify-between items-start">
@@ -233,7 +233,7 @@ const Page = () => {
               </div>
 
               {/* Right - Rubik's Cube */}
-              <div className=" sm:w-32 sm:h-32 -translate-x-30 translate-y-43">
+              <div className="hidden sm:block sm:w-32 sm:h-32 -translate-x-30 translate-y-43">
                 <BlackRubiksCube />
               </div>
             </div>
@@ -373,52 +373,321 @@ const Page = () => {
               </button>
             </div>
           </div>
-         <div className="relative flex-1 min-h-100 rounded-3xl border border-gray-200 shadow-[inset_0_0_160px_rgba(0,0,0,0.15)] p-6 sm:p-8 flex flex-col overflow-hidden">
+          <div className="relative flex-1 min-h-100 rounded-3xl border border-gray-200 shadow-[inset_0_0_160px_rgba(0,0,0,0.15)] p-6 sm:p-8 flex flex-col overflow-hidden">
+            <div className="flex flex-wrap justify-end gap-2">
+              <h1 className="text-black text-3xl font-semibold">Founder of</h1>
 
-  <div className="flex flex-wrap justify-end gap-2">
-    <h1 className="text-black text-3xl font-semibold">
-      Founder of
-    </h1>
+              <h1 className="text-black text-3xl font-bold">Rune</h1>
+            </div>
 
-    <h1 className="text-black text-3xl font-bold">
-      Rune
-    </h1>
-  </div>
+            <div className="flex justify-end mt-4">
+              <h2 className="text-black text-sm font-medium text-right">
+                Crafting Digital Experiences
+              </h2>
+            </div>
 
-  <div className="flex justify-end mt-4">
-    <h2 className="text-black text-sm font-medium text-right">
-      Crafting Digital Experiences
-    </h2>
-  </div>
+            <div className="absolute top-40 left-55 -translate-x-1/2 flex items-end">
+              <Image
+                src="/iphone.png"
+                alt="Left Phone"
+                width={150}
+                height={200}
+                className="-rotate-12 -translate-x-5 translate-y-8 z-10 drop-shadow-2xl"
+              />
 
-  <div className="absolute top-40 left-55 -translate-x-1/2 flex items-end">
-    <Image
-      src="/iphone.png"
-      alt="Left Phone"
-      width={150}
-      height={200}
-      className="-rotate-12 -translate-x-5 translate-y-8 z-10 drop-shadow-2xl"
-    />
+              <Image
+                src="/iphone.png"
+                alt="Center Phone"
+                width={150}
+                height={200}
+                className="-mx-10 z-20 drop-shadow-2xl"
+              />
 
-    <Image
-      src="/iphone.png"
-      alt="Center Phone"
-      width={150}
-      height={200}
-      className="-mx-10 z-20 drop-shadow-2xl"
-    />
-
-    <Image
-      src="/iphone.png"
-      alt="Right Phone"
-      width={150}
-      height={200}
-      className="rotate-12 translate-x-5 translate-y-8 z-10 drop-shadow-2xl"
-    />
-  </div>
-
-</div>
+              <Image
+                src="/iphone.png"
+                alt="Right Phone"
+                width={150}
+                height={200}
+                className="rotate-12 translate-x-5 translate-y-8 z-10 drop-shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
+      </div>
+      <div className=" flex flex-col justify-center items-center mt-40 mb-20">
+        <p className="text-gray-500">Crafting modern experiences</p>
+
+        <div className="flex">
+          <h1 className="text-6xl font-bold">VENTURE</h1>
+          <h1 className="text-6xl font-bold">SHOWCASE</h1>
+        </div>
+      </div>
+      {/* project 1 */}
+      <div className="con flex flex-col lg:flex-row w-full gap-10">
+          <div className="lg:w-2/5 md:w-1/2 md:pr-10">
+          {/* Item */}
+          <div className="relative flex pb-12">
+            <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-gray-300" />
+
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              1
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Planning</h3>
+              <p className="text-gray-400">
+                Discuss project goals and requirements.
+              </p>
+            </div>
+          </div>
+
+          {/* Item */}
+          <div className="relative flex pb-12">
+            <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-gray-300" />
+
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              2
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Design</h3>
+              <p className="text-gray-400">Create modern UI/UX design.</p>
+            </div>
+          </div>
+
+          {/* Item */}
+          <div className="relative flex">
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              3
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Launch</h3>
+              <p className="text-gray-400">Deploy the final project.</p>
+            </div>
+          </div>
+        </div>
+            <div className="grid grid-cols-3 gap-6 p-10 w-full">
+        {/* Left small card */}
+        <div className="h-55 rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
+          <Image
+            src="/iphone.png"
+            width={140}
+            height={300}
+            alt="iPhone"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-35 top-7"
+          />
+        </div>
+
+        {/* Big right card */}
+        <div
+          className="col-span-2 row-span-2 h-112.5 rounded-3xl
+           bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative"
+        >
+          <Image
+            src="/ipad.webp"
+            width={100}
+            height={200}
+            alt="iPhone"
+            className="absolute bottom-10
+          left-1/2
+          -translate-x-1/2
+          w-[80%] -top-1.5"
+          />
+        </div>
+
+        {/* Another small card */}
+        <div className="h-55 rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
+          <Image
+            src="/iphone.png"
+            width={140}
+            height={300}
+            alt="iPhone"
+            className="absolute bottom-0 left-1/2 
+      -translate-x-1/2 w-35 top-7"
+          />
+        </div>
+      </div>
+     
+      
+      </div>
+      {/* project 2 */}
+      <div className="con flex flex-col lg:flex-row w-full gap-10">
+          <div className="lg:w-2/5 md:w-1/2 md:pr-10">
+          {/* Item */}
+          <div className="relative flex pb-12">
+            <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-gray-300" />
+
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              1
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Planning</h3>
+              <p className="text-gray-400">
+                Discuss project goals and requirements.
+              </p>
+            </div>
+          </div>
+
+          {/* Item */}
+          <div className="relative flex pb-12">
+            <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-gray-300" />
+
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              2
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Design</h3>
+              <p className="text-gray-400">Create modern UI/UX design.</p>
+            </div>
+          </div>
+
+          {/* Item */}
+          <div className="relative flex">
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              3
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Launch</h3>
+              <p className="text-gray-400">Deploy the final project.</p>
+            </div>
+          </div>
+        </div>
+            <div className="grid grid-cols-3 gap-6 p-10 w-full">
+        {/* Left small card */}
+        <div className="h-55 rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
+          <Image
+            src="/iphone.png"
+            width={140}
+            height={300}
+            alt="iPhone"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-35 top-7"
+          />
+        </div>
+
+        {/* Big right card */}
+        <div
+          className="col-span-2 row-span-2 h-112.5 rounded-3xl
+           bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative"
+        >
+          <Image
+            src="/ipad.webp"
+            width={100}
+            height={200}
+            alt="iPhone"
+            className="absolute bottom-10
+          left-1/2
+          -translate-x-1/2
+          w-[80%] -top-1.5"
+          />
+        </div>
+
+        {/* Another small card */}
+        <div className="h-55 rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
+          <Image
+            src="/iphone.png"
+            width={140}
+            height={300}
+            alt="iPhone"
+            className="absolute bottom-0 left-1/2 
+      -translate-x-1/2 w-35 top-7"
+          />
+        </div>
+      </div>
+     
+      
+      </div>
+      {/* project 3 */}
+      <div className="con flex flex-col lg:flex-row w-full gap-10">
+          <div className="lg:w-2/5 md:w-1/2 md:pr-10">
+          {/* Item */}
+          <div className="relative flex pb-12">
+            <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-gray-300" />
+
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              1
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Planning</h3>
+              <p className="text-gray-400">
+                Discuss project goals and requirements.
+              </p>
+            </div>
+          </div>
+
+          {/* Item */}
+          <div className="relative flex pb-12">
+            <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-gray-300" />
+
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              2
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Design</h3>
+              <p className="text-gray-400">Create modern UI/UX design.</p>
+            </div>
+          </div>
+
+          {/* Item */}
+          <div className="relative flex">
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+              3
+            </div>
+
+            <div className="ml-4">
+              <h3 className="font-semibold text-white">Launch</h3>
+              <p className="text-gray-400">Deploy the final project.</p>
+            </div>
+          </div>
+        </div>
+            <div className="grid grid-cols-3 gap-6 p-10 w-full">
+        {/* Left small card */}
+        <div className="h-55 rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
+          <Image
+            src="/iphone.png"
+            width={140}
+            height={300}
+            alt="iPhone"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-35 top-7"
+          />
+        </div>
+
+        {/* Big right card */}
+        <div
+          className="col-span-2 row-span-2 h-112.5 rounded-3xl
+           bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative"
+        >
+          <Image
+            src="/ipad.webp"
+            width={100}
+            height={200}
+            alt="iPhone"
+            className="absolute bottom-10
+          left-1/2
+          -translate-x-1/2
+          w-[80%] -top-1.5"
+          />
+        </div>
+
+        {/* Another small card */}
+        <div className="h-55 rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
+          <Image
+            src="/iphone.png"
+            width={140}
+            height={300}
+            alt="iPhone"
+            className="absolute bottom-0 left-1/2 
+      -translate-x-1/2 w-35 top-7"
+          />
+        </div>
+      </div>
+     
+      
       </div>
     </main>
   );
