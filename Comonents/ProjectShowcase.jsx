@@ -5,6 +5,7 @@ import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 // import BlackGlobe from "@/Comonents/BlackGlobe";
+import HoverCircle from './HoverCircle';
 
 const ProjectShowcase = () => {
   return (
@@ -21,6 +22,7 @@ const ProjectShowcase = () => {
                 <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p></li>
               </ol>
             </div>
+            <HoverCircle>
         <div className="grid grid-cols-3 gap-1 lg:gap-6 p-10 w-full  ">
           {/* Left small card */}
           <div className=" h-20 lg:h-55 rounded-lg lg:rounded-3xl bg-linear-to-br from-red-800 to-red-500 overflow-hidden relative">
@@ -62,7 +64,9 @@ const ProjectShowcase = () => {
             />
           </div>
         </div>
+        </HoverCircle>
       </div>
+   
       </div>
     </>
   )
