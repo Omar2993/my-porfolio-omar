@@ -9,17 +9,24 @@ import Hero from "@/Comonents/Hero";
 import AboutCards from "@/Comonents/AboutCards";
 import ProjectShowcase from "@/Comonents/ProjectShowcase";
 import SectionTitle from "@/Comonents/SectionTitle";
+import SkillSet from "@/Comonents/SkillSet";
+import CrimeSceneEffect from "@/Comonents/CrimeSceneEffect";
+import ProfileSection from "@/Comonents/ProfileSection";
+import Testimonials from "@/Comonents/Testimonials";
+import LastWord from "@/Comonents/LastWord";
 
 const Page = () => {
   return (
     <main className="overflow-y-hidden overflow-x-hidden ">
       <Hero />
       <AboutCards />
-        <SectionTitle />
+      <SectionTitle />
       <ProjectShowcase />
-      <ProjectShowcase />
-      <ProjectShowcase />
-    
+      <SkillSet />
+      <CrimeSceneEffect />
+      <ProfileSection />
+      <Testimonials/>
+      <LastWord/>
     </main>
   );
 };
