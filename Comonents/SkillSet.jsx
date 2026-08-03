@@ -1,4 +1,6 @@
 import React from "react";
+import AnimatedGradientText from "./AnimatedGradientText";
+import Image from "next/image";
 
 const skills = [
   "ReactJS",
@@ -29,9 +31,26 @@ const skills = [
 
 const SkillSet = () => {
   return (
-    <section className="w-full py-20 px-6">
-
-      <div
+    <section className="w-full py-40 px-6">
+<div className="relative flex justify-center">
+  <Image
+    src="/flower.png"
+    alt=""
+    width={1000}
+    height={1000}
+    className="
+      absolute
+      left-1/2
+      top-1/2
+      w-auto
+      h-64
+      md:h-80
+      lg:h-170
+      z-0
+      animate-slow-rotate
+    "
+  />
+</div>      <div
         className="
         max-w-7xl 
         mx-auto 
@@ -42,7 +61,6 @@ const SkillSet = () => {
         text-center
       "
       >
-
         <p
           className="
           text-sm
@@ -51,14 +69,15 @@ const SkillSet = () => {
           tracking-[0.3em]
           text-gray-400
           mb-4
+          z-10
         "
         >
           My Skillset
         </p>
 
-
         <h1
           className="
+         z-10
           text-4xl
           sm:text-5xl
           md:text-6xl
@@ -70,10 +89,9 @@ const SkillSet = () => {
         >
           The Magic{" "}
           <span className="text-gray-400">
-            Behind
+            <AnimatedGradientText>Behind</AnimatedGradientText>
           </span>
         </h1>
-
 
         <p
           className="
@@ -86,10 +104,9 @@ const SkillSet = () => {
           leading-7
         "
         >
-          Exploring the technologies, tools, and creative process
-          behind building modern digital experiences.
+          Exploring the technologies, tools, and creative process behind
+          building modern digital experiences.
         </p>
-
 
         {/* Skills */}
         <div
@@ -125,10 +142,7 @@ const SkillSet = () => {
             </div>
           ))}
         </div>
-
-
       </div>
-
     </section>
   );
 };

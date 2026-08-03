@@ -24,7 +24,7 @@ console.log(projects);
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.10,
       }
     );
 
@@ -36,11 +36,11 @@ console.log(projects);
   return (
     <div className="mx-auto px-6 py-20">
 
-      <div className="flex flex-col lg:flex-row lg:items-start gap-10">
+      <div className="flex flex-col lg:flex-row lg:items-start gap-10 ">
 
 
         {/* LEFT STICKY */}
-        <div className="w-full lg:w-2/5 lg:sticky lg:top-24 self-start h-fit">
+        <div className="w-full lg:w-2/5 lg:sticky lg:top-24 self-start  h-fit">
 
           <h2 className="text-4xl font-bold mb-4">
             {activeProject.title}
@@ -78,7 +78,7 @@ console.log(projects);
 
 
         {/* RIGHT SCROLL */}
-        <div className="w-full lg:w-3/5">
+        <div className="w-full ">
 
 
           {projects.map((project, index) => (
@@ -88,7 +88,8 @@ console.log(projects);
               data-index={index}
               className="
               project-item
-              min-h-screen
+              min-h-[70vh]
+              lg:min-h-[55vh]
               flex
               items-center
               "
@@ -97,19 +98,18 @@ console.log(projects);
 
               <HoverCircle>
 
-                <div className="grid grid-cols-3 gap-1 lg:gap-6 p-10 w-full">
+                <div className="grid grid-cols-3 gap-1 lg:gap-5 px-10 t-0 w-full">
 
 
                   {/* Small card */}
-                  <div className="
-                    h-20 lg:h-55
+                  <div className={`
+                    h-15 lg:h-45
                     rounded-lg lg:rounded-3xl
                     bg-linear-to-br
-                    from-red-800
-                    to-red-500
+                    ${project.color}
                     overflow-hidden
                     relative
-                  ">
+                  `}>
 
                     <Image
                       src="/iphone.png"
@@ -131,17 +131,17 @@ console.log(projects);
 
 
                   {/* Big card */}
-                  <div className="
+                  <div className={`
                     col-span-2
                     row-span-2
-                    h-40 lg:h-112.5
+                    h-40 lg:h-94
+                    
                     rounded-lg lg:rounded-3xl
                     bg-linear-to-br
-                    from-red-800
-                    to-red-500
+                    ${project.color}
                     overflow-hidden
                     relative
-                  ">
+                  `}>
 
                     <Image
                       src="/ipad.webp"
@@ -163,15 +163,14 @@ console.log(projects);
 
 
                   {/* Small card */}
-                  <div className="
-                    h-20 lg:h-55
+                  <div className={`
+                    h-15 lg:h-45
                     rounded-lg lg:rounded-3xl
                     bg-linear-to-br
-                    from-red-800
-                    to-red-500
+                    ${project.color}
                     overflow-hidden
                     relative
-                  ">
+                  `}>
 
                     <Image
                       src="/iphone.png"

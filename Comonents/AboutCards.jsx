@@ -47,6 +47,7 @@ const AboutCards = () => {
   />
 
   {/* Clock Image */}
+  <div className="relative">
   <Image
     src="/clock.png"
     width={251}
@@ -62,6 +63,39 @@ const AboutCards = () => {
       lg:block
     "
   />
+    {/* Second Hand */}
+  <div
+    className="
+      absolute
+      left-1/2
+      bottom-1/2
+      top-[335px]
+      z-40
+      w-0.5
+      h-28
+      bg-red-500
+      -translate-x-1/2
+      origin-bottom
+      animate-second
+    "
+  ></div>
+
+  {/* Center Dot */}
+  <div
+    className="
+      absolute
+      top-111.5
+      left-1/2
+      z-30
+      -translate-x-1/2
+      -translate-y-1/2
+      w-3
+      h-3
+      rounded-full
+      bg-red-500
+    "
+  ></div>
+  </div>
       <div
         className="
            hidden

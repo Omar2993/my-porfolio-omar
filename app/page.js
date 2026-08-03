@@ -5,6 +5,7 @@ import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 // import BlackGlobe from "@/Comonents/BlackGlobe";
+import { motion, useMotionValue, animate } from "framer-motion";
 import Hero from "@/Comonents/Hero";
 import AboutCards from "@/Comonents/AboutCards";
 import ProjectShowcase from "@/Comonents/ProjectShowcase";
@@ -14,10 +15,14 @@ import CrimeSceneEffect from "@/Comonents/CrimeSceneEffect";
 import ProfileSection from "@/Comonents/ProfileSection";
 import Testimonials from "@/Comonents/Testimonials";
 import LastWord from "@/Comonents/LastWord";
+import FlowerSpinner from "@/Comonents/FlowerSpinner";
+import RotatingBubble from "@/Comonents/RotatingBubble";
 
 const Page = () => {
   return (
-    <main className="overflow-y-hidden overflow-x-hidden ">
+    <main className=" overflow-x-clip ">
+      {/* <RotatingBubble/> */}
+      {/* <FlowerSpinner/> */}
       <Hero />
       <AboutCards />
       <SectionTitle />
