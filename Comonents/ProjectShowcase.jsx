@@ -8,39 +8,39 @@ import ScrollProgress from "./ScrollProgress";
 
 const ProjectShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-const [progress, setProgress] = useState(0);
-  
-useEffect(() => {
-  const handleScroll = () => {
-    const section = document.getElementById("projects");
+  const [progress, setProgress] = useState(0);
 
-    if (!section) return;
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("projects");
 
-    const rect = section.getBoundingClientRect();
+      if (!section) return;
 
-    const totalScroll =
-      section.offsetHeight - window.innerHeight;
+      const rect = section.getBoundingClientRect();
 
-    const scrolled = Math.min(
-      Math.max(-rect.top, 0),
-      totalScroll
-    );
+      const totalScroll =
+        section.offsetHeight - window.innerHeight;
 
-    const percentage =
-      totalScroll <= 0 ? 0 : (scrolled / totalScroll) * 100;
+      const scrolled = Math.min(
+        Math.max(-rect.top, 0),
+        totalScroll
+      );
 
-    setProgress(percentage);
-  };
+      const percentage =
+        totalScroll <= 0 ? 0 : (scrolled / totalScroll) * 100;
 
-  window.addEventListener("scroll", handleScroll);
+      setProgress(percentage);
+    };
 
-  handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-console.log(projects);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   const activeProject = projects[activeIndex];
+
 
   useEffect(() => {
     const items = document.querySelectorAll(".project-item");
@@ -49,74 +49,151 @@ console.log(projects);
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Number(entry.target.dataset.index);
-            setActiveIndex(index);
+            setActiveIndex(Number(entry.target.dataset.index));
           }
         });
       },
       {
-        threshold: 0.10,
+        threshold: 0.1,
       }
     );
 
     items.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
+
   }, []);
 
-  return (
-    <div id="projects" className="mx-auto px-6 py-20">
 
-      <div className="flex flex-col lg:flex-row lg:items-start gap-10 ">
+  return (
+    <div
+      id="projects"
+      className="
+      mx-auto 
+      px-4 
+      sm:px-6 
+      lg:px-8 
+      py-16 
+      sm:py-20
+      "
+    >
+
+      <div
+        className="
+        flex 
+        flex-col 
+        lg:flex-row 
+        lg:items-start 
+        gap-12 
+        lg:gap-16
+        "
+      >
 
 
         {/* LEFT STICKY */}
-        <div className="w-full lg:w-2/5 lg:sticky lg:top-24 self-start  h-fit">
 
-          <h2 className="text-4xl font-bold mb-4">
+        <div
+          className="
+          w-full 
+          lg:w-2/5 
+          lg:sticky 
+          lg:top-24 
+          self-start 
+          h-fit
+          "
+        >
+
+          <h2
+            className="
+            text-3xl 
+            sm:text-4xl 
+            lg:text-5xl 
+            font-bold 
+            mb-4
+            "
+          >
             {activeProject.title}
           </h2>
 
-          <p className="mb-6 text-gray-300 leading-7">
+
+          <p
+            className="
+            mb-6 
+            text-sm 
+            sm:text-base 
+            text-gray-300 
+            leading-7
+            "
+          >
             {activeProject.description}
           </p>
 
 
-          <ul className="list-disc pl-5 space-y-2">
+          <ul
+            className="
+            list-disc 
+            pl-5 
+            space-y-2
+            text-sm
+            sm:text-base
+            "
+          >
             {activeProject.features.map((feature, i) => (
               <li key={i}>
                 {feature}
               </li>
             ))}
           </ul>
-     
 
 
-          <div className="flex flex-wrap gap-3 mt-8">
+          <div
+            className="
+            flex 
+            flex-wrap 
+            gap-2 
+            sm:gap-3 
+            mt-8
+            "
+          >
 
             {activeProject.tech.map((tech, i) => (
+
               <span
                 key={i}
-                className="px-4 py-2 rounded-full border border-white/20"
+                className="
+                px-3 
+                py-1.5
+                sm:px-4 
+                sm:py-2
+                text-xs
+                sm:text-sm
+                rounded-full 
+                border 
+                border-white/20
+                "
               >
                 {tech}
               </span>
+
             ))}
 
           </div>
 
         </div>
-    
 
 
-       <ScrollProgress
-  progress={progress}
-  total={projects.length}
-  activeIndex={activeIndex}
-/>
+
+        <ScrollProgress
+          progress={progress}
+          total={projects.length}
+          activeIndex={activeIndex}
+        />
+
+
 
         {/* RIGHT SCROLL */}
-        <div className="w-full ">
+
+        <div className="w-full">
 
 
           {projects.map((project, index) => (
@@ -126,7 +203,8 @@ console.log(projects);
               data-index={index}
               className="
               project-item
-              min-h-[70vh]
+              min-h-[45vh]
+              sm:min-h-[60vh]
               lg:min-h-[55vh]
               flex
               items-center
@@ -136,18 +214,37 @@ console.log(projects);
 
               <HoverCircle>
 
-                <div className="grid grid-cols-3 gap-1 lg:gap-5 px-10 t-0 w-full">
+
+                <div
+                  className="
+                  grid 
+                  grid-cols-3 
+                  gap-2
+                  sm:gap-3
+                  lg:gap-5
+                  px-2
+                  sm:px-6
+                  lg:px-10
+                  w-full
+                  "
+                >
 
 
-                  {/* Small card */}
-                  <div className={`
-                    h-15 lg:h-45
-                    rounded-lg lg:rounded-3xl
+                  {/* SMALL CARD */}
+
+                  <div
+                    className={`
+                    h-16
+                    sm:h-28
+                    lg:h-45
+                    rounded-lg
+                    lg:rounded-3xl
                     bg-linear-to-br
                     ${project.color}
                     overflow-hidden
                     relative
-                  `}>
+                    `}
+                  >
 
                     <Image
                       src="/iphone.png"
@@ -159,8 +256,11 @@ console.log(projects);
                       bottom-0
                       left-1/2
                       -translate-x-1/2
-                      w-35
-                      top-7
+                      w-16
+                      sm:w-24
+                      lg:w-35
+                      top-4
+                      sm:top-7
                       "
                     />
 
@@ -168,18 +268,24 @@ console.log(projects);
 
 
 
-                  {/* Big card */}
-                  <div className={`
+
+                  {/* BIG CARD */}
+
+                  <div
+                    className={`
                     col-span-2
                     row-span-2
-                    h-40 lg:h-94
-                    
-                    rounded-lg lg:rounded-3xl
+                    h-40
+                    sm:h-64
+                    lg:h-94
+                    rounded-lg
+                    lg:rounded-3xl
                     bg-linear-to-br
                     ${project.color}
                     overflow-hidden
                     relative
-                  `}>
+                    `}
+                  >
 
                     <Image
                       src="/ipad.webp"
@@ -191,8 +297,9 @@ console.log(projects);
                       bottom-10
                       left-1/2
                       -translate-x-1/2
-                      w-[80%]
-                      -top-1.5
+                      w-[85%]
+                      sm:w-[80%]
+                      -top-1
                       "
                     />
 
@@ -200,15 +307,22 @@ console.log(projects);
 
 
 
-                  {/* Small card */}
-                  <div className={`
-                    h-15 lg:h-45
-                    rounded-lg lg:rounded-3xl
+
+                  {/* SMALL CARD */}
+
+                  <div
+                    className={`
+                    h-16
+                    sm:h-28
+                    lg:h-45
+                    rounded-lg
+                    lg:rounded-3xl
                     bg-linear-to-br
                     ${project.color}
                     overflow-hidden
                     relative
-                  `}>
+                    `}
+                  >
 
                     <Image
                       src="/iphone.png"
@@ -220,8 +334,11 @@ console.log(projects);
                       bottom-0
                       left-1/2
                       -translate-x-1/2
-                      w-35
-                      top-7
+                      w-16
+                      sm:w-24
+                      lg:w-35
+                      top-4
+                      sm:top-7
                       "
                     />
 
@@ -229,6 +346,7 @@ console.log(projects);
 
 
                 </div>
+
 
               </HoverCircle>
 
@@ -240,10 +358,13 @@ console.log(projects);
 
         </div>
 
+
       </div>
+
 
     </div>
   );
 };
+
 
 export default ProjectShowcase;
