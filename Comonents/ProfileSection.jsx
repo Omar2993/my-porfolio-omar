@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import ThreeDImageCarousel from "./ThreeDImageCarousel";
 const ProfileSection = () => {
   return (
     <section className="w-full py-20 px-6">
@@ -97,7 +97,7 @@ const ProfileSection = () => {
 
 
           {/* Images */}
-          <div
+          <div 
             className="
               grid
               grid-cols-2
@@ -105,44 +105,8 @@ const ProfileSection = () => {
             "
           >
 
-            <Image
-              src="/profile1.webp"
-              width={400}
-              height={500}
-              alt="Developer workspace"
-              className="
-                rounded-3xl
-                object-cover
-                col-span-2
-                h-[350px]
-              "
-            />
-
-
-            <Image
-              src="/profile2.webp"
-              width={300}
-              height={300}
-              alt="Coding setup"
-              className="
-                rounded-3xl
-                object-cover
-                h-[220px]
-              "
-            />
-
-
-            <Image
-              src="/profile3.webp"
-              width={300}
-              height={300}
-              alt="Creative development"
-              className="
-                rounded-3xl
-                object-cover
-                h-[220px]
-              "
-            />
+           <ThreeDImageCarousel/>
+            
 
           </div>
 

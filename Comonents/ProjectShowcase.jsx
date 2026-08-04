@@ -4,9 +4,40 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { projects } from "../data/Projects";
 import HoverCircle from "./HoverCircle";
+import ScrollProgress from "./ScrollProgress";
 
 const ProjectShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+const [progress, setProgress] = useState(0);
+  
+useEffect(() => {
+  const handleScroll = () => {
+    const section = document.getElementById("projects");
+
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+
+    const totalScroll =
+      section.offsetHeight - window.innerHeight;
+
+    const scrolled = Math.min(
+      Math.max(-rect.top, 0),
+      totalScroll
+    );
+
+    const percentage =
+      totalScroll <= 0 ? 0 : (scrolled / totalScroll) * 100;
+
+    setProgress(percentage);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 console.log(projects);
 
   const activeProject = projects[activeIndex];
@@ -34,7 +65,7 @@ console.log(projects);
   }, []);
 
   return (
-    <div className="mx-auto px-6 py-20">
+    <div id="projects" className="mx-auto px-6 py-20">
 
       <div className="flex flex-col lg:flex-row lg:items-start gap-10 ">
 
@@ -58,6 +89,7 @@ console.log(projects);
               </li>
             ))}
           </ul>
+     
 
 
           <div className="flex flex-wrap gap-3 mt-8">
@@ -74,8 +106,14 @@ console.log(projects);
           </div>
 
         </div>
+    
 
 
+       <ScrollProgress
+  progress={progress}
+  total={projects.length}
+  activeIndex={activeIndex}
+/>
 
         {/* RIGHT SCROLL */}
         <div className="w-full ">

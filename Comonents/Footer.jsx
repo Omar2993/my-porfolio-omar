@@ -71,7 +71,7 @@ const Footer = () => {
 
           <div className="mb-6">
             <Image
-              src="/signature.svg"
+              src="/signature.png"
               width={180}
               height={60}
               alt="Omar signature logo"

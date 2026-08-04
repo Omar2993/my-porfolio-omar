@@ -1,5 +1,6 @@
 import React from "react";
 
+import RotatingBubble from "@/Comonents/RotatingBubble";
 const LastWord = () => {
   return (
     <section className="w-full py-20 px-6">
@@ -83,6 +84,9 @@ const LastWord = () => {
         {/* Animated Bubble */}
         <div
           className="
+          flex 
+          justify-center 
+          items-center
             w-40
             h-40
             sm:w-52
@@ -90,10 +94,13 @@ const LastWord = () => {
             lg:w-64
             lg:h-64
             rounded-full
-            bg-neutral-800
-            animate-pulse
+            bg-neutral-100
+
           "
-        ></div>
+        >
+<RotatingBubble/>
+
+        </div>
 
 
       </div>
