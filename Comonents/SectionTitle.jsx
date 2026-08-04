@@ -9,15 +9,27 @@ const SectionTitle = () => {
   return (
   <>
   
-      <div className=" flex flex-col justify-center items-center mt-40 mb-20">
-        <p className="text-gray-500">Crafting modern experiences</p>
+    <div className="flex flex-col justify-center items-center mt-40 mb-20 px-4">
 
-        <div className="flex">
-          <h1 className="text-6xl font-bold">VENTURE</h1>
-          <h1 className="text-6xl font-bold">
-            <AnimatedGradientText>SHOWCASE</AnimatedGradientText></h1>
-        </div>
-      </div>
+  <p className="text-gray-500 text-sm sm:text-base text-center">
+    Crafting modern experiences
+  </p>
+
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+    
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center">
+      VENTURE
+    </h1>
+
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center">
+      <AnimatedGradientText>
+        SHOWCASE
+      </AnimatedGradientText>
+    </h1>
+
+  </div>
+
+</div>
   </>
   )
 }
