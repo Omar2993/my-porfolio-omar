@@ -62,7 +62,10 @@ if (ballRef.current) {
   }, []);
 
   return (
-    <div className="sticky top-24 h-[80vh] flex justify-center ">
+    <div className="sticky top-24 h-[80vh] flex justify-center
+           hidden
+          md:block
+          lg:block">
       <div
         ref={lineRef}
         className="relative h-full w-2 rounded-full bg-black"

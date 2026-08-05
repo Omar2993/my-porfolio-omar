@@ -18,16 +18,11 @@ const ProjectShowcase = () => {
 
       const rect = section.getBoundingClientRect();
 
-      const totalScroll =
-        section.offsetHeight - window.innerHeight;
+      const totalScroll = section.offsetHeight - window.innerHeight;
 
-      const scrolled = Math.min(
-        Math.max(-rect.top, 0),
-        totalScroll
-      );
+      const scrolled = Math.min(Math.max(-rect.top, 0), totalScroll);
 
-      const percentage =
-        totalScroll <= 0 ? 0 : (scrolled / totalScroll) * 100;
+      const percentage = totalScroll <= 0 ? 0 : (scrolled / totalScroll) * 100;
 
       setProgress(percentage);
     };
@@ -38,9 +33,7 @@ const ProjectShowcase = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   const activeProject = projects[activeIndex];
-
 
   useEffect(() => {
     const items = document.querySelectorAll(".project-item");
@@ -55,15 +48,13 @@ const ProjectShowcase = () => {
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
     items.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
-
   }, []);
-
 
   return (
     <div
@@ -77,7 +68,6 @@ const ProjectShowcase = () => {
       sm:py-20
       "
     >
-
       <div
         className="
         flex 
@@ -88,8 +78,6 @@ const ProjectShowcase = () => {
         lg:gap-16
         "
       >
-
-
         {/* LEFT STICKY */}
 
         <div
@@ -102,7 +90,6 @@ const ProjectShowcase = () => {
           h-fit
           "
         >
-
           <h2
             className="
             text-3xl 
@@ -114,7 +101,6 @@ const ProjectShowcase = () => {
           >
             {activeProject.title}
           </h2>
-
 
           <p
             className="
@@ -128,7 +114,6 @@ const ProjectShowcase = () => {
             {activeProject.description}
           </p>
 
-
           <ul
             className="
             list-disc 
@@ -139,12 +124,9 @@ const ProjectShowcase = () => {
             "
           >
             {activeProject.features.map((feature, i) => (
-              <li key={i}>
-                {feature}
-              </li>
+              <li key={i}>{feature}</li>
             ))}
           </ul>
-
 
           <div
             className="
@@ -155,9 +137,7 @@ const ProjectShowcase = () => {
             mt-8
             "
           >
-
             {activeProject.tech.map((tech, i) => (
-
               <span
                 key={i}
                 className="
@@ -174,30 +154,21 @@ const ProjectShowcase = () => {
               >
                 {tech}
               </span>
-
             ))}
-
           </div>
-
         </div>
-
-
 
         <ScrollProgress
           progress={progress}
           total={projects.length}
           activeIndex={activeIndex}
+         
         />
-
-
 
         {/* RIGHT SCROLL */}
 
         <div className="w-full">
-
-
           {projects.map((project, index) => (
-
             <div
               key={index}
               data-index={index}
@@ -210,11 +181,7 @@ const ProjectShowcase = () => {
               items-center
               "
             >
-
-
               <HoverCircle>
-
-
                 <div
                   className="
                   grid 
@@ -228,13 +195,13 @@ const ProjectShowcase = () => {
                   w-full
                   "
                 >
-
-
                   {/* SMALL CARD */}
 
                   <div
                     className={`
-                    h-16
+                    hidden
+                    md:block
+                    lg:block
                     sm:h-28
                     lg:h-45
                     rounded-lg
@@ -245,7 +212,6 @@ const ProjectShowcase = () => {
                     relative
                     `}
                   >
-
                     <Image
                       src="/iphone.png"
                       width={140}
@@ -263,11 +229,7 @@ const ProjectShowcase = () => {
                       sm:top-7
                       "
                     />
-
                   </div>
-
-
-
 
                   {/* BIG CARD */}
 
@@ -276,6 +238,7 @@ const ProjectShowcase = () => {
                     col-span-2
                     row-span-2
                     h-40
+                    sm:w-10/12
                     sm:h-64
                     lg:h-94
                     rounded-lg
@@ -286,7 +249,6 @@ const ProjectShowcase = () => {
                     relative
                     `}
                   >
-
                     <Image
                       src="/ipad.webp"
                       width={100}
@@ -302,17 +264,16 @@ const ProjectShowcase = () => {
                       -top-1
                       "
                     />
-
                   </div>
-
-
-
 
                   {/* SMALL CARD */}
 
                   <div
                     className={`
                     h-16
+                      hidden
+                    md:block
+                    lg:block
                     sm:h-28
                     lg:h-45
                     rounded-lg
@@ -323,7 +284,6 @@ const ProjectShowcase = () => {
                     relative
                     `}
                   >
-
                     <Image
                       src="/iphone.png"
                       width={140}
@@ -341,30 +301,15 @@ const ProjectShowcase = () => {
                       sm:top-7
                       "
                     />
-
                   </div>
-
-
                 </div>
-
-
               </HoverCircle>
-
-
             </div>
-
           ))}
-
-
         </div>
-
-
       </div>
-
-
     </div>
   );
 };
-
 
 export default ProjectShowcase;
