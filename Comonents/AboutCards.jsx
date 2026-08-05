@@ -76,7 +76,9 @@ const AboutCards = () => {
       bg-red-500
       -translate-x-1/2
       origin-bottom
-      animate-second
+      animate-
+      hidden
+      lg:block
     "
   ></div>
 
@@ -92,7 +94,9 @@ const AboutCards = () => {
       w-3
       h-3
       rounded-full
-      bg-red-500
+      bg-red-
+      hidden
+      lg:block
     "
   ></div>
   </div>
