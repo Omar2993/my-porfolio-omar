@@ -82,6 +82,8 @@ const ProjectShowcase = () => {
 
         <div
           className="
+          hidden
+          lg:block
           w-full 
           lg:w-2/5 
           lg:sticky 
@@ -164,28 +166,61 @@ const ProjectShowcase = () => {
           activeIndex={activeIndex}
          
         />
+        
 
         {/* RIGHT SCROLL */}
 
-        <div className="w-full">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              data-index={index}
-              className="
-              project-item
-              min-h-[45vh]
-              sm:min-h-[60vh]
-              lg:min-h-[55vh]
-              flex
-              items-center
-              "
+       <div className="w-full">
+  {projects.map((project, index) => (
+    <div
+      key={index}
+      data-index={index}
+      className="
+        project-item
+        min-h-[45vh]
+        sm:min-h-[60vh]
+        lg:min-h-[55vh]
+        flex
+        flex-col
+        lg:flex-row
+        items-center
+      "
+    >
+
+      {/* Mobile Only */}
+      <div className="lg:hidden w-full mb-8">
+        <h2 className="text-3xl font-bold mb-4">
+          {project.title}
+        </h2>
+
+        <p className="text-gray-300 leading-7 mb-6">
+          {project.description}
+        </p>
+
+        <ul className="list-disc pl-5 space-y-2">
+          {project.features.map((feature, i) => (
+            <li key={i}>{feature}</li>
+          ))}
+        </ul>
+
+        <div className="flex flex-wrap gap-2 mt-6">
+          {project.tech.map((tech, i) => (
+            <span
+              key={i}
+              className="px-3 py-1 rounded-full border border-white/20 text-sm"
             >
-              <HoverCircle>
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <HoverCircle>
                 <div
                   className="
                   grid 
-                  grid-cols-3 
+                  grid-cols-1
+                  lg:grid-cols-3 
                   gap-2
                   sm:gap-3
                   lg:gap-5

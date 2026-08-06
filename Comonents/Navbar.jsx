@@ -1,9 +1,22 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-
+import Image from "next/image"
+import TransitionLink from "@/Comonents/TransitionLink";
 const Navbar = () => {
+  const pathname = usePathname();
+  const menu = [
+  { name: "Home", path: "/" },
+  { name: "Work", path: "/work" },
+  { name: "About", path: "/about" },
+  { name: "Blog", path: "/blog" },
+  { name: "More", path: "/more" },
+];
   return (
+    
     <nav
       className="
         fixed
@@ -60,29 +73,46 @@ const Navbar = () => {
           shadow-[0_1px_2px_rgba(0,0,0,0.35),0_6px_12px_rgba(0,0,0,0.35)]
         "
       >
-        <li>
-          <Link className="bg-white rounded-full p-2 px-3" href="/">
-            Home
-          </Link>
-        </li>
+        {menu.map((item)=>(
+  <li key={item.path} className="relative">
 
-        <li>
-          <Link href="/work">Work</Link>
-        </li>
+    <TransitionLink
+      href={item.path}
+      className="relative block px-3 py-2"
+    >
 
-        <li>
-          <Link href="/about">About</Link>
-        </li>
+      {pathname === item.path && (
+        <motion.div
+          layoutId="active-pill"
+          className="
+          absolute
+          inset-0
+          bg-white
+          rounded-full
+          "
+          transition={{
+            type:"spring",
+            stiffness:500,
+            damping:35
+          }}
+        />
+      )}
 
-        <li>
-          <Link href="/blog">Blog</Link>
-        </li>
+      <span
+      className={`
+      relative z-10
+      ${pathname === item.path 
+        ? "text-black" 
+        : "text-gray-400"}
+      `}
+      >
+        {item.name}
+      </span>
 
-        <li>
-          <Link href="/more">More</Link>
-        </li>
+    </TransitionLink>
 
-        <li className="text-gray-500 mx-4">|</li>
+  </li>
+))}
 
         <li>
           <button
@@ -111,9 +141,9 @@ const Navbar = () => {
         </li>
 
         <li>
-          <Link className="bg-white rounded-full p-2 px-2" href="/bookacall">
+          <TransitionLink className="bg-white rounded-full p-2 px-2" href="/bookacall">
             Book a Call
-          </Link>
+          </TransitionLink>
         </li>
       </ul>
 

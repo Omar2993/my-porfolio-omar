@@ -117,18 +117,17 @@ a[href] {
 .animate-slow-rotate {
   animation: slowRotate 30s linear infinite;
 }
-@keyframes secondMove {
+@keyframes secondHand {
   from {
     transform: translateX(-50%) rotate(0deg);
   }
-
   to {
     transform: translateX(-50%) rotate(360deg);
   }
 }
 
 .animate-second {
-  animation: secondMove 60s linear infinite;
+  animation: secondHand 60s linear infinite;
 }
 .flip-card{
     perspective:1000px;

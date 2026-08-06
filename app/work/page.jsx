@@ -6,7 +6,16 @@ import { saira } from "@/app/fonts";
 import { archivoBlack } from "@/app/fonts";
 const work = () => {
   return (
-   <header className="max-w-[1600px] mx-auto px-4">
+  <header
+  className="
+    max-w-[1600px]
+    mx-auto
+    h-225
+    px-4
+    bg-[radial-gradient(circle,rgba(0,0,0,0)_37%,rgba(0,0,0,0.7)_236%)]
+    mask-[linear-gradient(to_bottom,black_85%,transparent_100%)]
+  "
+>
                <p
                  className={`${archivoBlack.className}
                  flex justify-center items-center

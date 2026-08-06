@@ -1,19 +1,49 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { archivoBlack } from "@/app/fonts";
 import { greatVibes } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import BlackRubiksCube from "@/Comonents/BlackRubiksCube";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 // import BlackGlobe from "@/Comonents/BlackGlobe";
 const AboutCards = () => {
+  const sectionRef = useRef(null);
+
+const { scrollYProgress } = useScroll({
+  target: sectionRef,
+  offset: ["start end", "end start"],
+});
+
+const y = useTransform(scrollYProgress, [0, 1], [120, -120]);
+const leftRotate = useTransform(scrollYProgress, [0, 1], [-25, -4]);
+const rightRotate = useTransform(scrollYProgress, [0, 1], [25, 4]);
+
+const smoothY = useSpring(y, {
+  stiffness: 50,
+  damping: 18,
+  mass: 1.6,
+});
+
+const smoothLeftRotate = useSpring(leftRotate, {
+  stiffness: 50,
+  damping: 18,
+  mass: 1.6,
+});
+
+const smoothRightRotate = useSpring(rightRotate, {
+  stiffness: 50,
+  damping: 18,
+  mass: 1.6,
+});
   return (
-    <div className="relative max-w-[1600px] mx-auto px-4">
+    <div ref={sectionRef} className="relative max-w-[1600px] mx-auto px-4">
       {/* Circle */}
-      
-   
-  {/* White Circle */}
-  <div
-    className="
+
+      {/* White Circle */}
+      <div
+        className="
       absolute
       left-1/2
       top-74
@@ -28,11 +58,11 @@ const AboutCards = () => {
       hidden
       lg:block
     "
-  />
+      />
 
-  {/* Circle Corrector */}
-  <div
-    className="
+      {/* Circle Corrector */}
+      <div
+        className="
       absolute
       left-1/2
       -translate-x-1/2
@@ -44,16 +74,16 @@ const AboutCards = () => {
       hidden
       lg:block
     "
-  />
+      />
 
-  {/* Clock Image */}
-  <div className="relative">
-  <Image
-    src="/clock.png"
-    width={251}
-    height={236}
-    alt="clock"
-    className="
+      {/* Clock Image */}
+      <div className="relative">
+        <Image
+          src="/clock.png"
+          width={251}
+          height={236}
+          alt="clock"
+          className="
       absolute
       left-1/2
       top-80
@@ -62,29 +92,28 @@ const AboutCards = () => {
       hidden
       lg:block
     "
-  />
-    {/* Second Hand */}
-  <div
-    className="
-      absolute
-      left-1/2
-      bottom-1/2
-      top-[335px]
-      z-40
-      w-0.5
-      h-28
-      bg-red-500
-      -translate-x-1/2
-      origin-bottom
-      animate-
-      hidden
-      lg:block
-    "
-  ></div>
+        />
+        {/* Second Hand */}
+        <div
+          className="
+    absolute
+    left-1/2
+    top-[335px]
+    z-40
+    w-0.5
+    h-28
+    bg-red-500
+    -translate-x-1/2
+    origin-bottom
+    animate-second
+    hidden
+    lg:block
+  "
+        ></div>
 
-  {/* Center Dot */}
-  <div
-    className="
+        {/* Center Dot */}
+        <div
+          className="
       absolute
       top-111.5
       left-1/2
@@ -94,12 +123,12 @@ const AboutCards = () => {
       w-3
       h-3
       rounded-full
-      bg-red-
+      bg-red-500
       hidden
       lg:block
     "
-  ></div>
-  </div>
+        ></div>
+      </div>
       <div
         className="
            hidden
@@ -330,16 +359,27 @@ const AboutCards = () => {
             </h2>
           </div>
 
-          <div className="absolute top-40  left-45 lg:left-55 -translate-x-1/2 flex items-end">
-            <Image
-              src="/iphone.png"
-              alt="Left Phone"
-              width={150}
-              height={200}
-              className=" -rotate-12 -translate-x-5 translate-y-8 z-10 drop-shadow-2xl 
-    w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
-    h-auto"
-            />
+          <motion.div
+            style={{ y: smoothY  }}
+            className="absolute top-50  left-1/2 lg:left-68 -translate-x-1/2 flex "
+          >
+            <motion.div
+              style={{ rotate: smoothLeftRotate  }}
+              className="-translate-x-5 translate-y-8 z-10"
+            >
+              <Image
+                src="/iphone.png"
+                alt="Left Phone"
+                width={150}
+                height={200}
+                className="
+      drop-shadow-2xl
+      w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
+      h-auto
+      
+    "
+              />
+            </motion.div>
 
             <Image
               src="/iphone.png"
@@ -347,20 +387,27 @@ const AboutCards = () => {
               width={150}
               height={200}
               className="-mx-10 z-20 drop-shadow-2xl
-               w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
+               w-20 sm:w-24 md:w-28 lg:w-32 xl:w-29
     h-auto"
             />
 
-            <Image
-              src="/iphone.png"
-              alt="Right Phone"
-              width={150}
-              height={200}
-              className="rotate-12 translate-x-5 translate-y-8 z-10 drop-shadow-2xl
-               w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
-    h-auto"
-            />
-          </div>
+            <motion.div
+              style={{ rotate: smoothRightRotate }}
+              className="translate-x-5 translate-y-8 z-10"
+            >
+              <Image
+                src="/iphone.png"
+                alt="Right Phone"
+                width={150}
+                height={200}
+                className="
+      drop-shadow-2xl
+      w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
+      h-auto
+    "
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>
