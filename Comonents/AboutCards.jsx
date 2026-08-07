@@ -182,7 +182,7 @@ const AboutCards = () => {
   "
         >
           <div
-            className="
+            className={`
     flex
     justify-between
     items-start
@@ -208,7 +208,7 @@ const AboutCards = () => {
     lg:h-auto
     lg:w-auto
     lg:z-auto
-  "
+            `}
           >
             {/* Left */}
             <div className="flex flex-col space-y-1 p-7 lg:p-2">
