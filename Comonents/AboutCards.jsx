@@ -190,7 +190,7 @@ const AboutCards = () => {
     
 
     /* SM - MD */
-    bg-[url('/Cube.jpeg')]
+    bg-[url('/cube.jpeg')]
     bg-cover
     bg-center
     absolute
