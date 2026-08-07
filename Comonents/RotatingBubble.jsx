@@ -6,7 +6,7 @@ const RotatingBubble = () => {
     <div className="relative flex items-center justify-center w-[420px] h-[420px]">
       <div className="animate-[spin_12s_linear_infinite]">
         <Image
-          src="/bubblewhite.png"
+          src="/bubble.png"
           width={251}
           height={236}
           alt=""

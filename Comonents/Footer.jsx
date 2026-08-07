@@ -75,7 +75,8 @@ const Footer = () => {
               width={180}
               height={60}
               alt="Omar signature logo"
-              className="w-40"
+              className="w-80
+              h-auto"
             />
           </div>
 
