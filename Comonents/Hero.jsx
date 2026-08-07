@@ -21,7 +21,7 @@ hero-name
 flex justify-center items-center
 text-center leading-none
 pt-10
-mt-20 sm:mt-28 md:mt-36 lg:mt-45
+mt-60 md:mt-36 lg:mt-45
 text-[#171717]
 text-[70px]
 sm:text-[100px]
@@ -75,7 +75,7 @@ deliver Real Impact
             max-w-350
             mx-auto
             px-6
-            mt-20
+            mt-60
             lg:mt-52
             flex
              flex-row

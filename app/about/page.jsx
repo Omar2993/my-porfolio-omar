@@ -5,11 +5,14 @@ import Image from 'next/image';
 import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
+import PageAnimation from "@/Comonents/PageAnimation";
 const about = () => {
   return (
-<header className="max-w-[1600px] mx-auto px-4">
+    <PageAnimation>
+<header className="max-w-[1600px] mx-auto px-4 ">
             <p
               className={`${archivoBlack.className}
+              hero-name
               flex justify-center items-center
               text-center leading-none
               pt-10
@@ -20,7 +23,8 @@ const about = () => {
               md:text-[140px]
               lg:text-[170px]
               xl:text-[200px]
-              tracking-[-15px]`}
+              tracking-[-15px]
+              `}
             >
              ABOUT ME
             </p>
@@ -28,6 +32,7 @@ const about = () => {
             <h2
               id="hero-heading"
               className={`${inter.className}
+              hero-subtitle
               mt-4
               text-center
               tracking-[6px]
@@ -44,6 +49,7 @@ const about = () => {
   
             <h2
               className={`${greatVibes.className}
+              hero-impact
               text-center
               text-[#171717]
               font-semibold
@@ -55,7 +61,9 @@ const about = () => {
             who I am.
             </h2>
           </header>
+          </PageAnimation>
   )
 }
+
 
 export default about;

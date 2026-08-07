@@ -3,7 +3,6 @@ import "./globals.css";
 import LenisProvider from "@/Comonents/LenisProvider";
 import Navbar from '@/Comonents/Navbar'
 import Footer from "@/Comonents/Footer";
-import PageTransition from "@/Comonents/PageTransition";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,22 +27,13 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col lg:mx-14 md:mx-14 bg-white sm:mx-0">
        
       <LenisProvider>
-        <PageTransition>
         <Navbar />
 
         {children}
 
         <Footer/>
-        <div
-  id="page-transition"
-  className="fixed left-1/2 top-1/2 z-[9999] h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black pointer-events-none"
-  style={{
-    transform: "translate(-50%, -50%) scale(0)",
-  }}
-/>
-</PageTransition>
+
         </LenisProvider>
-        
       
       </body>
     </html>

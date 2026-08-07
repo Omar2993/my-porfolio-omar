@@ -4,11 +4,14 @@ import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import { archivoBlack } from "@/app/fonts";
+import PageAnimation from "@/Comonents/PageAnimation";
 const Blog = () => {
   return (
-    <header className="max-w-[1600px] mx-auto ">
-      <p
-        className={`${archivoBlack.className}
+    <PageAnimation>
+      <header className="max-w-[1600px] mx-auto ">
+        <p
+          className={`${archivoBlack.className}
+                  hero-name
                  flex justify-center items-center
                  text-center leading-none
                  pt-10
@@ -21,13 +24,14 @@ const Blog = () => {
                  xl:text-[200px]
                  px-4 
              `}
-      >
-        BLOGS
-      </p>
+        >
+          BLOGS
+        </p>
 
-      <h2
-        id="hero-heading"
-        className={`${inter.className}
+        <h2
+          id="hero-heading"
+          className={`${inter.className}
+          hero-subtitle
                  mt-4
                  text-center
                  tracking-[6px]
@@ -38,12 +42,13 @@ const Blog = () => {
                  sm:text-[16px]
                  md:text-[18px]
                  lg:text-[22px]`}
-      >
-        Thoughts, tutorials, and
-      </h2>
+        >
+          Thoughts, tutorials, and
+        </h2>
 
-      <h2
-        className={`${greatVibes.className}
+        <h2
+          className={`${greatVibes.className}
+          hero-impact
                  text-center
                  text-[#171717]
                  font-semibold
@@ -51,10 +56,11 @@ const Blog = () => {
                  sm:text-[55px]
                  md:text-[65px]
                  lg:text-[70px]`}
-      >
-        insights I share.
-      </h2>
-    </header>
+        >
+          insights I share.
+        </h2>
+      </header>
+    </PageAnimation>
   );
 };
 

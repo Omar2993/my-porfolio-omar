@@ -6,37 +6,38 @@ import { greatVibes } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import BlackRubiksCube from "@/Comonents/BlackRubiksCube";
 import { useRef } from "react";
+
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 // import BlackGlobe from "@/Comonents/BlackGlobe";
 const AboutCards = () => {
   const sectionRef = useRef(null);
 
-const { scrollYProgress } = useScroll({
-  target: sectionRef,
-  offset: ["start end", "end start"],
-});
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
 
-const y = useTransform(scrollYProgress, [0, 1], [120, -120]);
-const leftRotate = useTransform(scrollYProgress, [0, 1], [-25, -4]);
-const rightRotate = useTransform(scrollYProgress, [0, 1], [25, 4]);
+  const y = useTransform(scrollYProgress, [0, 1], [120, -120]);
+  const leftRotate = useTransform(scrollYProgress, [0, 1], [-25, -4]);
+  const rightRotate = useTransform(scrollYProgress, [0, 1], [25, 4]);
 
-const smoothY = useSpring(y, {
-  stiffness: 50,
-  damping: 18,
-  mass: 1.6,
-});
+  const smoothY = useSpring(y, {
+    stiffness: 50,
+    damping: 18,
+    mass: 1.6,
+  });
 
-const smoothLeftRotate = useSpring(leftRotate, {
-  stiffness: 50,
-  damping: 18,
-  mass: 1.6,
-});
+  const smoothLeftRotate = useSpring(leftRotate, {
+    stiffness: 50,
+    damping: 18,
+    mass: 1.6,
+  });
 
-const smoothRightRotate = useSpring(rightRotate, {
-  stiffness: 50,
-  damping: 18,
-  mass: 1.6,
-});
+  const smoothRightRotate = useSpring(rightRotate, {
+    stiffness: 50,
+    damping: 18,
+    mass: 1.6,
+  });
   return (
     <div ref={sectionRef} className="relative max-w-[1600px] mx-auto px-4">
       {/* Circle */}
@@ -161,6 +162,7 @@ const smoothRightRotate = useSpring(rightRotate, {
           mt-36
           lg:mt-44
           px-4
+          
         "
       >
         <div
@@ -173,22 +175,56 @@ const smoothRightRotate = useSpring(rightRotate, {
                 sm:p-6
                 min-h-55
                 shadow-[inset_0_0_160px_rgba(0,0,0,0.07)]
+                relative
+                z-20
+                overflow-hidden
+                
   "
         >
-          <div className="flex justify-between items-start">
+          <div
+            className="
+    flex
+    justify-between
+    items-start
+
+    
+
+    /* SM - MD */
+    bg-[url('/Cube.jpeg')]
+    bg-cover
+    bg-center
+    absolute
+    top-0
+    -left-3
+    h-60
+    w-110
+    z-10
+
+    /* LG+ (আগের মতো) */
+    lg:bg-none
+    lg:static
+    lg:top-auto
+    lg:left-auto
+    lg:h-auto
+    lg:w-auto
+    lg:z-auto
+  "
+          >
             {/* Left */}
-            <div className="flex flex-col space-y-1">
-              <h1 className={`${archivoBlack.className} text-3xl sm:text-4xl`}>
+            <div className="flex flex-col space-y-1 p-7 lg:p-2">
+              <h1
+                className={`${archivoBlack.className} text-white  lg:text-black text-3xl  sm:text-4xl`}
+              >
                 Jabed
               </h1>
 
               <h2
-                className={`${greatVibes.className} text-4xl sm:text-5xl opacity-55`}
+                className={`${greatVibes.className} text-white lg:text-black text-4xl sm:text-5xl opacity-55`}
               >
                 Omar
               </h2>
 
-              <div className="flex items-center gap-2 mt-2">
+              <div className={`flex items-center gap-2 mt-2 `}>
                 <Image
                   className="grayscale opacity-60"
                   alt="Location icon"
@@ -206,7 +242,7 @@ const smoothRightRotate = useSpring(rightRotate, {
             </div>
 
             {/* Right - Rubik's Cube */}
-            <div className="hidden sm:block sm:w-32 sm:h-32 -translate-x-30 translate-y-43">
+            <div className="hidden sm:block sm:w-32 sm:h-32 -translate-x-35 translate-y-43">
               <BlackRubiksCube />
             </div>
           </div>
@@ -360,11 +396,11 @@ const smoothRightRotate = useSpring(rightRotate, {
           </div>
 
           <motion.div
-            style={{ y: smoothY  }}
+            style={{ y: smoothY }}
             className="absolute top-50  left-1/2 lg:left-68 -translate-x-1/2 flex "
           >
             <motion.div
-              style={{ rotate: smoothLeftRotate  }}
+              style={{ rotate: smoothLeftRotate }}
               className="-translate-x-5 translate-y-8 z-10"
             >
               <Image
@@ -373,9 +409,9 @@ const smoothRightRotate = useSpring(rightRotate, {
                 width={150}
                 height={200}
                 className="
-      drop-shadow-2xl
-      w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
-      h-auto
+                  drop-shadow-2xl
+                  w-20 sm:w-24 md:w-28 lg:w-36 xl:w-40
+                  h-auto
       
     "
               />
@@ -388,7 +424,7 @@ const smoothRightRotate = useSpring(rightRotate, {
               height={200}
               className="-mx-10 z-20 drop-shadow-2xl
                w-20 sm:w-24 md:w-28 lg:w-32 xl:w-29
-    h-auto"
+               h-auto"
             />
 
             <motion.div
