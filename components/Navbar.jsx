@@ -6,7 +6,6 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import PhoneNavbar from "./PhoneNavbar";
-import TransitionLink from "@/components/TransitionLink";
 
 
 const Navbar = () => {
@@ -126,7 +125,7 @@ const Navbar = () => {
 
           <li key={item.path}>
 
-            <TransitionLink
+            <Link
               href={item.path}
               className="
                 relative
@@ -171,7 +170,7 @@ const Navbar = () => {
               </span>
 
 
-            </TransitionLink>
+            </Link>
 
           </li>
 
