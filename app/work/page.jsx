@@ -4,7 +4,7 @@ import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import { archivoBlack } from "@/app/fonts";
-import PageAnimation from "@/Components/PageAnimation";
+import PageAnimation from "@/components/PageAnimation";
 const work = () => {
   return (
     <PageAnimation>

@@ -1,6 +1,6 @@
 import React from "react";
 import Orb from "./ui/Orb";
-import RotatingBubble from "@/Components/RotatingBubble";
+import RotatingBubble from "@/components/RotatingBubble";
 const LastWord = () => {
   return (
     <section className="w-full py-20 px-6">

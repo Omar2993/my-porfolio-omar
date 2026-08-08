@@ -4,7 +4,7 @@ import Image from "next/image";
 import { archivoBlack } from "@/app/fonts";
 import { greatVibes } from "@/app/fonts";
 import { saira } from "@/app/fonts";
-import BlackRubiksCube from "@/Components/BlackRubiksCube";
+import BlackRubiksCube from "@/components/BlackRubiksCube";
 import { useRef } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 

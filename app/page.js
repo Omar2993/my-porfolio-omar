@@ -4,22 +4,22 @@ import { archivoBlack } from "@/app/fonts";
 import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
-// import BlackGlobe from "@/Components/BlackGlobe";
+// import BlackGlobe from "@/components/BlackGlobe";
 import { motion, useMotionValue, animate } from "framer-motion";
-import Hero from "@/Components/Hero";
-import AboutCards from "@/Components/AboutCards";
-import ProjectShowcase from "@/Components/ProjectShowcase";
-import SectionTitle from "@/Components/SectionTitle";
-import SkillSet from "@/Components/SkillSet";
-import CrimeSceneEffect from "@/Components/CrimeSceneEffect";
-import ProfileSection from "@/Components/ProfileSection";
-import Testimonials from "@/Components/Testimonials";
-import LastWord from "@/Components/LastWord";
+import Hero from "@/components/Hero";
+import AboutCards from "@/components/AboutCards";
+import ProjectShowcase from "@/components/ProjectShowcase";
+import SectionTitle from "@/components/SectionTitle";
+import SkillSet from "@/components/SkillSet";
+import CrimeSceneEffect from "@/components/CrimeSceneEffect";
+import ProfileSection from "@/components/ProfileSection";
+import Testimonials from "@/components/Testimonials";
+import LastWord from "@/components/LastWord";
 
 
 
-import FlowerSpinner from "@/Components/FlowerSpinner";
-import RotatingBubble from "@/Components/RotatingBubble";
+import FlowerSpinner from "@/components/FlowerSpinner";
+import RotatingBubble from "@/components/RotatingBubble";
 
 const Page = () => {
   return (
