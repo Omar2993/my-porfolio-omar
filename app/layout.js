@@ -1,8 +1,10 @@
+
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import LenisProvider from "@/Comonents/LenisProvider";
-import Navbar from '@/Comonents/Navbar'
-import Footer from "@/Comonents/Footer";
+import LenisProvider from "@/Components/LenisProvider";
+import Navbar from '@/Components/Navbar'
+import Footer from "@/Components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,16 +26,49 @@ export default function RootLayout({ children }) {
       lang="en"
        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased min-h-screen bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed`}
     >
+       <head>
+{/* <Script
+  id="scroll-restoration"
+  strategy="beforeInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      try {
+        history.scrollRestoration = "manual";
+
+        const y = sessionStorage.getItem("scroll-position");
+
+        if (y !== null) {
+          document.documentElement.classList.add("scroll-restoring");
+
+          window.addEventListener(
+            "DOMContentLoaded",
+            function () {
+              window.scrollTo(0, Number(y));
+
+              requestAnimationFrame(function () {
+                document.documentElement.classList.remove(
+                  "scroll-restoring"
+                );
+              });
+            },
+            { once: true }
+          );
+        }
+      } catch (e) {}
+    `,
+  }}
+/> */}
+      </head>
       <body className="min-h-full flex flex-col lg:mx-14 md:mx-14 bg-white sm:mx-0">
-       
+     
       <LenisProvider>
-        <Navbar />
+        <Navbar/>
 
         {children}
-
         <Footer/>
 
         </LenisProvider>
+        
       
       </body>
     </html>

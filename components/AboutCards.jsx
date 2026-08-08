@@ -4,8 +4,9 @@ import Image from "next/image";
 import { archivoBlack } from "@/app/fonts";
 import { greatVibes } from "@/app/fonts";
 import { saira } from "@/app/fonts";
-import BlackRubiksCube from "@/Comonents/BlackRubiksCube";
+import BlackRubiksCube from "@/Components/BlackRubiksCube";
 import { useRef } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 // import BlackGlobe from "@/Comonents/BlackGlobe";
@@ -272,24 +273,31 @@ const AboutCards = () => {
                 PHILOSOPHY
               </h2>
 
-              <ul className="flex flex-wrap gap-3 mt-4">
-                <li className="px-4 py-2 rounded-full border">Motion</li>
+                 <Tabs defaultValue="account" className="w-full">
+  <TabsList>
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+    <TabsTrigger value="profile">Profile</TabsTrigger>
+    <TabsTrigger value="settings">Settings</TabsTrigger>
+  </TabsList>
 
-                <li className="px-4 py-2 rounded-full border">Type</li>
+  <TabsContent value="account">
+    Make changes to your account here.
+  </TabsContent>
 
-                <li className="px-4 py-2 rounded-full border">Feedback</li>
+  <TabsContent value="password">
+    Change your password here.
+  </TabsContent>
 
-                <li className="px-4 py-2 rounded-full border">Craft</li>
-              </ul>
+  <TabsContent value="profile">
+    Update your profile information here.
+  </TabsContent>
 
-              <h3 className="text-2xl font-semibold mt-6">
-                Attention to detail
-              </h3>
-
-              <p className="text-gray-600 mt-3 max-w-md">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias,
-                atque?
-              </p>
+  <TabsContent value="settings">
+    Manage your settings here.
+  </TabsContent>
+</Tabs>
+             
             </div>
           </div>
         </div>

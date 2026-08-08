@@ -1,10 +1,9 @@
 import React from "react";
-
-import RotatingBubble from "@/Comonents/RotatingBubble";
+import Orb from "./ui/Orb";
+import RotatingBubble from "@/Components/RotatingBubble";
 const LastWord = () => {
   return (
     <section className="w-full py-20 px-6">
-
       <div
         className="
           max-w-7xl
@@ -17,10 +16,8 @@ const LastWord = () => {
           gap-12
         "
       >
-
         {/* Text Content */}
         <div className="text-center lg:text-left">
-
           <div
             className="
               flex
@@ -30,7 +27,6 @@ const LastWord = () => {
               gap-4
             "
           >
-
             {/* Profile Avatar */}
             <div
               className="
@@ -44,7 +40,6 @@ const LastWord = () => {
               "
             ></div>
 
-
             <h2
               className="
                 text-4xl
@@ -56,9 +51,7 @@ const LastWord = () => {
             >
               Let's create
             </h2>
-
           </div>
-
 
           <h2
             className="
@@ -71,15 +64,9 @@ const LastWord = () => {
               leading-tight
             "
           >
-            something{" "}
-            <span className="text-gray-400">
-              real.
-            </span>
+            something <span className="text-gray-400">real.</span>
           </h2>
-
-
         </div>
-
 
         {/* Animated Bubble */}
         <div
@@ -94,17 +81,21 @@ const LastWord = () => {
             lg:w-64
             lg:h-64
             rounded-full
-            bg-neutral-100
+            bg-neutral-200
 
           "
         >
-<RotatingBubble/>
-
+          <div style={{ width: "100%", height: "600px", position: "relative" }}>
+            <Orb
+              hoverIntensity={0.17}
+              rotateOnHover
+              hue={360}
+              forceHoverState={false}
+              backgroundColor="#000000"
+            />
+          </div>
         </div>
-
-
       </div>
-
     </section>
   );
 };

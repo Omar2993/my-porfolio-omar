@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
-import PageAnimation from "@/Comonents/PageAnimation";
+import PageAnimation from "@/Components/PageAnimation";
 const about = () => {
   return (
     <PageAnimation>

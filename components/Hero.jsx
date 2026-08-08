@@ -6,11 +6,15 @@ import { greatVibes } from "@/app/fonts";
 import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import PageAnimation from "./PageAnimation";
+import ShinyText from "@/components/ui/ShinyText";
+
+
 const Hero = () => {
   
  
   return (
     <PageAnimation>
+      
     <section aria-labelledby="hero-heading">
       
      <header  className="max-w-[1600px] mx-auto px-4 ">
@@ -29,7 +33,19 @@ md:text-[140px]
 lg:text-[170px]
 xl:text-[200px]`}
 >
-OMAR
+  <ShinyText
+  text="OMAR"
+  speed={3.6}
+  delay={0}
+  color="#000000"
+  shineColor="#3c3b3b"
+  spread={40}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false}
+/>
+
 </p>
 
 
@@ -63,7 +79,19 @@ sm:text-[55px]
 md:text-[65px]
 lg:text-[70px]`}
 >
-deliver Real Impact
+   <ShinyText
+  text="deliver Real Impact"
+ speed={3.6}
+  delay={0}
+  color="#000000"
+  shineColor="#ababab"
+  spread={40}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false}
+/>
+
 </h2>
 
 </header>
