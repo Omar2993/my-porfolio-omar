@@ -5,16 +5,27 @@ import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import { archivoBlack } from "@/app/fonts";
 import PageAnimation from "@/components/PageAnimation";
+
+import ShinyText from "@/components/ui/ShinyText";      
 const Blog = () => {
   return (
     <PageAnimation>
-      <header className="max-w-[1600px] mx-auto ">
+      <header    className="
+    max-w-[1600px]
+    mx-auto
+    -mt-45
+    h-225
+    px-4
+    bg-[radial-gradient(circle,rgba(0,0,0,0)_37%,rgba(0,0,0,0.7)_236%)]
+    mask-[linear-gradient(to_bottom,black_85%,transparent_100%)]
+  ">
         <p
           className={`${archivoBlack.className}
                   hero-name
                  flex justify-center items-center
                  text-center leading-none
-                 pt-10
+                 relative
+                 pt-60
                  mt-20 sm:mt-28 md:mt-36 lg:mt-45
                  text-[#171717]
                  text-[70px]
@@ -25,7 +36,18 @@ const Blog = () => {
                  px-4 
              `}
         >
-          BLOGS
+          <ShinyText
+            text="  BLOGS"
+            speed={3.6}
+            delay={0}
+            color="#000000"
+            shineColor="#3c3b3b"
+            spread={40}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+          />
         </p>
 
         <h2
@@ -43,7 +65,18 @@ const Blog = () => {
                  md:text-[18px]
                  lg:text-[22px]`}
         >
-          Thoughts, tutorials, and
+          <ShinyText
+            text=" Thoughts, tutorials, and"
+            speed={3.6}
+            delay={0}
+            color="#000000"
+            shineColor="#3c3b3b"
+            spread={40}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+          />
         </h2>
 
         <h2

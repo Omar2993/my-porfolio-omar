@@ -6,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import PhoneNavbar from "./PhoneNavbar";
+import HoverText from "./HoverText";
 
 
 const Navbar = () => {
@@ -23,6 +24,7 @@ const Navbar = () => {
   return (
     <>
     <PhoneNavbar/>
+    
       <nav 
   // style={{ viewTransitionName: "desktopnavbar" }}
       className="
@@ -166,7 +168,9 @@ const Navbar = () => {
                   }
                 `}
               >
+          <HoverText>     
                 {item.name}
+                </HoverText> 
               </span>
 
 

@@ -6,6 +6,8 @@ import { projects } from "../data/Projects";
 import HoverCircle from "./HoverCircle";
 import ScrollProgress from "./ScrollProgress";
 
+import PageAnimation from "./PageAnimation";
+
 const ProjectShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -116,17 +118,21 @@ const ProjectShowcase = () => {
             {activeProject.description}
           </p>
 
-          <ul
-            className="
-            list-disc 
-            pl-5 
-            space-y-2
-            text-sm
-            sm:text-base
-            "
-          >
+          <ul className="list-disc pl-5 space-y-2">
             {activeProject.features.map((feature, i) => (
-              <li key={i}>{feature}</li>
+              <li
+                key={`${activeProject.title}-${i}`}
+                className="
+        opacity-0
+        translate-y-5
+        animate-[featureIn_0.9s_cubic-bezier(0.22,1,0.36,1)_forwards]
+      "
+                style={{
+                  animationDelay: `${i * 180}ms`,
+                }}
+              >
+                {feature}
+              </li>
             ))}
           </ul>
 
@@ -141,18 +147,25 @@ const ProjectShowcase = () => {
           >
             {activeProject.tech.map((tech, i) => (
               <span
-                key={i}
+                key={`${activeProject.title}-${i}`}
                 className="
-                px-3 
-                py-1.5
-                sm:px-4 
-                sm:py-2
-                text-xs
-                sm:text-sm
-                rounded-full 
-                border 
-                border-white/20
-                "
+      px-3
+      py-1.5
+      sm:px-4
+      sm:py-2
+      text-xs
+      sm:text-sm
+      rounded-full
+      border
+      border-white/20
+
+      opacity-0
+      translate-y-3
+      animate-[techIn_0.8s_cubic-bezier(0.16,1,0.3,1)_forwards]
+    "
+                style={{
+                  animationDelay: `${i * 120}ms`,
+                }}
               >
                 {tech}
               </span>
@@ -164,18 +177,16 @@ const ProjectShowcase = () => {
           progress={progress}
           total={projects.length}
           activeIndex={activeIndex}
-         
         />
-        
 
         {/* RIGHT SCROLL */}
 
-       <div className="w-full">
-  {projects.map((project, index) => (
-    <div
-      key={index}
-      data-index={index}
-      className="
+        <div className="w-full">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              data-index={index}
+              className="
         project-item
         min-h-[45vh]
         sm:min-h-[60vh]
@@ -185,37 +196,34 @@ const ProjectShowcase = () => {
         lg:flex-row
         items-center
       "
-    >
-
-      {/* Mobile Only */}
-      <div className="lg:hidden w-full mb-8">
-        <h2 className="text-3xl font-bold mb-4">
-          {project.title}
-        </h2>
-
-        <p className="text-gray-300 leading-7 mb-6">
-          {project.description}
-        </p>
-
-        <ul className="list-disc pl-5 space-y-2">
-          {project.features.map((feature, i) => (
-            <li key={i}>{feature}</li>
-          ))}
-        </ul>
-
-        <div className="flex flex-wrap gap-2 mt-6">
-          {project.tech.map((tech, i) => (
-            <span
-              key={i}
-              className="px-3 py-1 rounded-full border border-white/20 text-sm"
             >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
+              {/* Mobile Only */}
+              <div className="lg:hidden w-full mb-8">
+                <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
 
-      <HoverCircle>
+                <p className="text-gray-300 leading-7 mb-6">
+                  {project.description}
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2">
+                  {project.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-2 mt-6">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 rounded-full border border-white/20 text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <HoverCircle>
                 <div
                   className="
                   grid 

@@ -192,9 +192,28 @@ a[href] {
 }
 
 
+@keyframes featureIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
 
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes techIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.96);
+  }
 
-
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
 /*     
 .page-transition {
   min-height: 100vh;

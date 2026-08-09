@@ -5,6 +5,8 @@ import { inter } from "@/app/fonts";
 import { saira } from "@/app/fonts";
 import { archivoBlack } from "@/app/fonts";
 import PageAnimation from "@/components/PageAnimation";
+
+import ShinyText from "@/components/ui/ShinyText";
 const work = () => {
   return (
     <PageAnimation>
@@ -12,7 +14,7 @@ const work = () => {
         className="
     max-w-[1600px]
     mx-auto
-    m
+    -mt-45
     h-225
     px-4
     bg-[radial-gradient(circle,rgba(0,0,0,0)_37%,rgba(0,0,0,0.7)_236%)]
@@ -22,9 +24,11 @@ const work = () => {
         <p
           className={`${archivoBlack.className}
                  hero-name
+                
                  flex justify-center items-center
                  text-center leading-none
-                 pt-10
+                  relative
+                 pt-60
                  mt-20 sm:mt-28 md:mt-36 lg:mt-45
                  text-[#171717]
                  text-[70px]
@@ -35,7 +39,18 @@ const work = () => {
                  tracking-[-15px]
                  `}
         >
-          MY WORKS
+          <ShinyText
+            text="  MY WORKS"
+            speed={3.6}
+            delay={0}
+            color="#000000"
+            shineColor="#3c3b3b"
+            spread={40}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+          />
         </p>
 
         <h2
@@ -53,7 +68,18 @@ const work = () => {
                  md:text-[18px]
                  lg:text-[22px]`}
         >
-          Crafting digital experiences
+          <ShinyText
+            text="Crafting digital experiences"
+            speed={3.6}
+            delay={0}
+            color="#000000"
+            shineColor="#3c3b3b"
+            spread={40}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+          />
         </h2>
 
         <h2
