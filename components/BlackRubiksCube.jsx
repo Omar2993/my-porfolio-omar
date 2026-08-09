@@ -99,7 +99,6 @@ export default function BlackRubiksCube() {
 
         <RubiksCube />
 
-        <Environment preset="city" />
 
         <EffectComposer>
           <Bloom

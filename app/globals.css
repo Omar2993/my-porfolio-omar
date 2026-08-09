@@ -214,6 +214,71 @@ a[href] {
     transform: translate3d(0, 0, 0) scale(1);
   }
 }
+/* Testimonials Animation */
+
+.testimonial-top {
+  animation: testimonialMoveLeft 35s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-bottom {
+  animation: testimonialMoveRight 35s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-top:hover,
+.testimonial-bottom:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-top {
+  animation: testimonialLeft 35s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-bottom {
+  animation: testimonialRight 35s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-top:hover,
+.testimonial-bottom:hover {
+  animation-play-state: paused;
+}
+
+@keyframes testimonialLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes testimonialRight {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-top,
+  .testimonial-bottom {
+    animation-duration: 30s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-top,
+  .testimonial-bottom {
+    animation: none;
+  }
+}
 /*     
 .page-transition {
   min-height: 100vh;

@@ -81,7 +81,8 @@ const LastWord = () => {
             lg:w-64
             lg:h-64
             rounded-full
-            bg-neutral-200
+            bg-black
+           
 
           "
         >
@@ -91,7 +92,7 @@ const LastWord = () => {
               rotateOnHover
               hue={360}
               forceHoverState={false}
-              backgroundColor="#000000"
+              backgroundColor="#ffffff"
             />
           </div>
         </div>
