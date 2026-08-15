@@ -24,34 +24,41 @@ export default function PhoneNavbar() {
           closed: {
             width: 224,
             height: 44,
-            borderRadius: 999,
+            borderRadius: 100,
             transition: {
-              duration: 0.35,
+              duration: 0.2,
               ease: "easeInOut",
+              y: -8,
+              transition: {
+                type: "spring",
+                stiffness: 500,
+                damping: 15,
+              },
             },
           },
           open: {
-            width: 310,
+            width: 400,
             height: 340,
             borderRadius: 28,
             transition: {
               width: {
-                duration: 0.22,
+                delay: 0.3,
+                duration: 0.14,
                 ease: "easeOut",
               },
               height: {
-                delay: 0.18,
-                duration: 0.28,
+                delay: 0.28,
+                duration: 0.20,
                 ease: "easeOut",
               },
               borderRadius: {
                 delay: 0.18,
-                duration: 0.2,
+                duration: 0.01,
               },
             },
           },
         }}
-        className="overflow-hidden bg-white shadow-[0_5px_20px_rgba(0,0,0,0.35)]"
+        className="overflow-hidden bg-white  shadow-[0_5px_20px_rgba(0,0,0,0.35)]"
       >
         <button
           onClick={() => setOpen(!open)}
@@ -59,9 +66,7 @@ export default function PhoneNavbar() {
         >
           <div>|</div>
 
-          <h1 className="font-semibold">
-            Javed Omar
-          </h1>
+          <h1 className="font-semibold">Javed Omar</h1>
 
           <div className="w-8 h-8 rounded-full bg-gray-300" />
         </button>
