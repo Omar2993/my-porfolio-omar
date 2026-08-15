@@ -173,7 +173,7 @@ const ProjectShowcase = () => {
           </div>
         </div>
 
-        <ScrollProgress
+        <ScrollProgress 
           progress={progress}
           total={projects.length}
           activeIndex={activeIndex}
@@ -249,7 +249,7 @@ const ProjectShowcase = () => {
       lg:h-45
       rounded-lg
       lg:rounded-3xl
-      bg-linear-to-br
+      bg-linear-to-bl
       ${project.color}
       overflow-hidden
       relative
