@@ -9,8 +9,7 @@ const LastWord = () => {
           max-w-7xl
           mx-auto
           flex
-          flex-col
-          lg:flex-row
+          flex-row
           items-center
           justify-between
           gap-12

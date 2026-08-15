@@ -6,35 +6,35 @@ const ThreeDRotation = () => {
     <div className="flex h-screen w-full items-center justify-center [perspective:900px]">
       <div className="relative h-[300px] w-[300px] [transform-style:preserve-3d]">
         <div className="box box1">
-          1
+          
           <Image
             src="/cube.jpeg"
             alt="Project showcase"
             fill
             priority
-            className="object-cover "
+            className="object-cover rounded-[20px]"
           />
         </div>
 
         <div className="box box2">
-          2
+          
           <Image
-            src="/images/image1.jpg"
+            src="/cube.jpeg"
             alt="Project showcase"
             fill
             priority
-            className="object-cover"
+            className="object-cover rounded-[20px]"
           />
         </div>
 
         <div className="box box3">
-          3
+          
           <Image
-            src="/images/image1.jpg"
+            src="/cube.jpeg"
             alt="Project showcase"
             fill
             priority
-            className="object-cover"
+            className="object-cover  rounded-[20px]"
           />
         </div>
       </div>

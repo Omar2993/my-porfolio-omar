@@ -271,85 +271,13 @@ const ProfileSection = () => {
           <div
             className="
               relative
-              min-h-[320px]
               w-full
-              overflow-hidden
-              rounded-[1.75rem]
-              border
-              border-neutral-200
-              bg-neutral-50
+              
               p-3
-              shadow-[0_20px_70px_rgba(0,0,0,0.06)]
-              sm:min-h-[400px]
-              sm:rounded-[2rem]
               sm:p-4
-              lg:min-h-[500px]
             "
           >
-            {/* Decorative corners */}
-            <span
-              aria-hidden="true"
-              className="
-                pointer-events-none
-                absolute
-                left-5
-                top-5
-                z-10
-                h-6
-                w-6
-                border-l
-                border-t
-                border-neutral-300
-              "
-            />
-
-            <span
-              aria-hidden="true"
-              className="
-                pointer-events-none
-                absolute
-                right-5
-                top-5
-                z-10
-                h-6
-                w-6
-                border-r
-                border-t
-                border-neutral-300
-              "
-            />
-
-            <span
-              aria-hidden="true"
-              className="
-                pointer-events-none
-                absolute
-                bottom-5
-                left-5
-                z-10
-                h-6
-                w-6
-                border-b
-                border-l
-                border-neutral-300
-              "
-            />
-
-            <span
-              aria-hidden="true"
-              className="
-                pointer-events-none
-                absolute
-                bottom-5
-                right-5
-                z-10
-                h-6
-                w-6
-                border-b
-                border-r
-                border-neutral-300
-              "
-            />
+         
 
             <div className="h-full min-h-[294px] w-full sm:min-h-[368px] lg:min-h-[468px]">
               <ThreeDImageCarousel />

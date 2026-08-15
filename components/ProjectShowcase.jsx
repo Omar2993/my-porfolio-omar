@@ -77,7 +77,7 @@ const ProjectShowcase = () => {
         lg:flex-row 
         lg:items-start 
         gap-12 
-        lg:gap-16
+        lg:gap-20
         "
       >
         {/* LEFT STICKY */}
@@ -86,7 +86,7 @@ const ProjectShowcase = () => {
           className="
           hidden
           lg:block
-          w-full 
+          min-w-60 
           lg:w-2/5 
           lg:sticky 
           lg:top-24 
@@ -226,34 +226,34 @@ const ProjectShowcase = () => {
               <HoverCircle>
                 <div
                   className="
-                  grid 
-                  grid-cols-1
-                  lg:grid-cols-3 
-                  gap-2
-                  sm:gap-3
-                  lg:gap-5
-                  px-2
-                  sm:px-6
-                  lg:px-10
-                  w-full
-                  "
+    grid
+    grid-cols-1
+    lg:grid-cols-3
+    gap-2
+    sm:gap-3
+    lg:gap-5
+    px-2
+    sm:px-6
+    lg:px-10
+    w-200
+  "
                 >
                   {/* SMALL CARD */}
 
                   <div
                     className={`
-                    hidden
-                    md:block
-                    lg:block
-                    sm:h-28
-                    lg:h-45
-                    rounded-lg
-                    lg:rounded-3xl
-                    bg-linear-to-br
-                    ${project.color}
-                    overflow-hidden
-                    relative
-                    `}
+      hidden
+      md:block
+      w-full
+      h-28
+      lg:h-45
+      rounded-lg
+      lg:rounded-3xl
+      bg-linear-to-br
+      ${project.color}
+      overflow-hidden
+      relative
+    `}
                   >
                     <Image
                       src="/iphone.png"
@@ -261,16 +261,13 @@ const ProjectShowcase = () => {
                       height={300}
                       alt="iPhone"
                       className="
-                      absolute
-                      bottom-0
-                      left-1/2
-                      -translate-x-1/2
-                      w-16
-                      sm:w-24
-                      lg:w-35
-                      top-4
-                      sm:top-7
-                      "
+        absolute
+        bottom-0
+        left-1/2
+        -translate-x-1/2
+        w-24
+        lg:w-35
+      "
                     />
                   </div>
 
@@ -278,34 +275,34 @@ const ProjectShowcase = () => {
 
                   <div
                     className={`
-                    col-span-2
-                    row-span-2
-                    h-40
-                    sm:w-10/12
-                    sm:h-64
-                    lg:h-94
-                    rounded-lg
-                    lg:rounded-3xl
-                    bg-linear-to-br
-                    ${project.color}
-                    overflow-hidden
-                    relative
-                    `}
+      col-span-1
+      lg:col-span-2
+      lg:row-span-2
+      w-90
+      h-40
+      sm:h-64
+      lg:h-94
+      rounded-lg
+      lg:rounded-3xl
+      bg-linear-to-br
+      ${project.color}
+      overflow-hidden
+      relative
+    `}
                   >
                     <Image
-                      src="/ipad.webp"
-                      width={100}
-                      height={200}
+                      src="/ipad.png"
+                      width={300}
+                      height={600}
                       alt="iPad"
                       className="
-                      absolute
-                      bottom-10
-                      left-1/2
-                      -translate-x-1/2
-                      w-[85%]
-                      sm:w-[80%]
-                      -top-1
-                      "
+        absolute
+        top-0
+        left-1/2
+        -translate-x-1/2
+        w-[85%]
+        sm:w-[80%]
+      "
                     />
                   </div>
 
@@ -313,19 +310,18 @@ const ProjectShowcase = () => {
 
                   <div
                     className={`
-                    h-16
-                      hidden
-                    md:block
-                    lg:block
-                    sm:h-28
-                    lg:h-45
-                    rounded-lg
-                    lg:rounded-3xl
-                    bg-linear-to-br
-                    ${project.color}
-                    overflow-hidden
-                    relative
-                    `}
+      hidden
+      md:block
+      w-full
+      h-28
+      lg:h-45
+      rounded-lg
+      lg:rounded-3xl
+      bg-linear-to-br
+      ${project.color}
+      overflow-hidden
+      relative
+    `}
                   >
                     <Image
                       src="/iphone.png"
@@ -333,16 +329,13 @@ const ProjectShowcase = () => {
                       height={300}
                       alt="iPhone"
                       className="
-                      absolute
-                      bottom-0
-                      left-1/2
-                      -translate-x-1/2
-                      w-16
-                      sm:w-24
-                      lg:w-35
-                      top-4
-                      sm:top-7
-                      "
+        absolute
+        bottom-0
+        left-1/2
+        -translate-x-1/2
+        w-24
+        lg:w-35
+      "
                     />
                   </div>
                 </div>
