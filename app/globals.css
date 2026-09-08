@@ -353,7 +353,19 @@ a[href] {
   }
 }
 
+/* navbar */
+::view-transition-old(desktopnavbar),
+::view-transition-new(desktopnavbar) {
+  animation: none;
+}
 
+::view-transition-old(desktopnavbar) {
+  display: none;
+}
+
+::view-transition-new(desktopnavbar) {
+  animation: none;
+}
 
 
 

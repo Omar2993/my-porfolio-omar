@@ -16,7 +16,7 @@ export default function PhoneNavbar() {
   ];
 
   return (
-    <div className="fixed top-5 left-1/2 -translate-x-1/2 z-[9999] lg:hidden">
+    <div   style={{ viewTransitionName: "desktopnavbar" }} className="fixed top-5 left-1/2 -translate-x-1/2 z-[9999] lg:hidden">
       <motion.div
         initial={false}
         animate={open ? "open" : "closed"}

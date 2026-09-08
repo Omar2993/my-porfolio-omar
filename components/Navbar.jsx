@@ -26,7 +26,8 @@ const Navbar = () => {
     <>
     <PhoneNavbar/>
     
-      <nav 
+      <nav  style={{ viewTransitionName: "desktopnavbar" }}
+  
   // style={{ viewTransitionName: "desktopnavbar" }}
       className="
       hidden
