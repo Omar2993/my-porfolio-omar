@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import PhoneNavbar from "./PhoneNavbar";
 import HoverText from "./HoverText";
+
+import { Link } from "next-view-transitions";
 
 
 const Navbar = () => {
