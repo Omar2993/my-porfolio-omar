@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
 import { Link } from "next-view-transitions";
 
 export default function PhoneNavbar() {

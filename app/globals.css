@@ -320,7 +320,13 @@ a[href] {
 /* 
 
 ---break--- */
-::view-transition-old(root),
+
+
+
+
+
+
+ ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
@@ -346,6 +352,12 @@ a[href] {
     transform: scale(1);
   }
 }
+
+
+
+
+
+
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
