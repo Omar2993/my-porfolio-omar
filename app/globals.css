@@ -340,6 +340,18 @@ a[href] {
   z-index: 2;
 }
 
+/* Navbar stays above the page transition */
+::view-transition-group(navbar),
+::view-transition-old(navbar),
+::view-transition-new(navbar) {
+  z-index: 9999;
+}
+
+::view-transition-old(navbar),
+::view-transition-new(navbar) {
+  animation: none;
+}
+
 @keyframes circle-reveal {
   0% {
     clip-path: circle(0% at 50% 50%);
