@@ -191,7 +191,6 @@ a[href] {
   transform: rotateY(180deg);
 }
 
-
 @keyframes featureIn {
   from {
     opacity: 0;
@@ -288,10 +287,6 @@ a[href] {
   transform: translate3d(0, 0, 0);
 } */
 
-
-
-
-
 /* 
 ::view-transition-new(page-enter) {
   animation: test 5s ease both;
@@ -325,7 +320,7 @@ a[href] {
 /* 
 
 ---break--- */
- ::view-transition-old(root),
+::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
@@ -338,18 +333,6 @@ a[href] {
 ::view-transition-new(root) {
   animation: circle-reveal 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
   z-index: 2;
-}
-
-/* Navbar stays above the page transition */
-::view-transition-group(navbar),
-::view-transition-old(navbar),
-::view-transition-new(navbar) {
-  z-index: 9999;
-}
-
-::view-transition-old(navbar),
-::view-transition-new(navbar) {
-  animation: none;
 }
 
 @keyframes circle-reveal {
